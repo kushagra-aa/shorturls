@@ -10,7 +10,7 @@ $(document).on("submit", "#post-form", function (e) {
             csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
         },
         success: function (data) {
-            $("h2").html(local_url + "/" + data);
+            $("h2").html(site_url + "/" + data);
         },
     });
 });
