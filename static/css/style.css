@@ -1,7 +1,20 @@
+@import url("color.css");
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+
+::-moz-selection {
+  color: var(--primary1);
+  background: var(--accent);
+}
+/* Code for Firefox */
+::selection {
+  color: var(--primary1);
+  background: var(--accent);
 }
 
 body,
@@ -16,22 +29,22 @@ body {
   min-height: 100vh;
   font-family: "Lato", sans-serif;
   line-height: 1.5;
-  color: #111;
+  color: var(--secondary);
+  background: var(--primary1);
 }
 
 main {
   max-width: 720px;
   width: 100%;
-  border: 2.5px solid #330867;
+  height: auto;
   border-radius: 2.5px;
-  box-shadow: 0 10px 20px rgba(17, 17, 17, 0.125),
-    0 5px 5px rgba(17, 17, 17, 0.25);
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(to bottom, #297440 0%, var(--accent) 100%);
 }
 
 h1 {
+  text-align: center;
   padding: 1rem;
-  color: white;
+  color: var(--primary2);
 }
 
 input,
@@ -47,7 +60,17 @@ input {
   box-sizing: border-box;
   width: 100%;
 }
-
+input[type="text"] {
+  background-color: var(--primary1);
+  border: 1px solid var(--primary2);
+  color: var(--primary2);
+  text-align: center;
+}
+input[type="text"]:focus {
+  border: none;
+  box-shadow: none;
+  background-color: var(--primary3);
+}
 .buttons {
   display: flex;
 }
@@ -55,15 +78,16 @@ input {
 button {
   cursor: pointer;
   flex: 1;
-  background-color: transparent;
-  color: white;
+  background: var(--primary1);
+  color: var(--primary3);
 }
 button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--primary3);
+  color: var(--primary1);
 }
 
 section {
   min-height: 120px;
   text-align: center;
-  background-color: white;
+  background-color: var(--accent);
 }

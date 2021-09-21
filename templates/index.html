@@ -17,7 +17,7 @@
     <h1>URL Shortener</h1>
     <form id="post-form">
       {% csrf_token %}
-      <input type="text" name="link" id="link" placeholder="Enter URL here" />
+      <input type="text" name="link" id="link" placeholder="Enter URL here" required autofocus />
       <div class="buttons">
         <button type="submit" id="shorten">Shorten</button>
       </div>
